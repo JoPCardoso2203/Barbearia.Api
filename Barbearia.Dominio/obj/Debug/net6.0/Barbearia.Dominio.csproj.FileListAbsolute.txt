@@ -1,0 +1,11 @@
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\bin\Debug\net6.0\Barbearia.Dominio.deps.json
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\bin\Debug\net6.0\Barbearia.Dominio.dll
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\bin\Debug\net6.0\Barbearia.Dominio.pdb
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\Barbearia.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\Barbearia.Dominio.AssemblyInfoInputs.cache
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\Barbearia.Dominio.AssemblyInfo.cs
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\Barbearia.Dominio.csproj.CoreCompileInputs.cache
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\Barbearia.Dominio.dll
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\refint\Barbearia.Dominio.dll
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\Barbearia.Dominio.pdb
+C:\Projetos\teste\Barbearia.Api\Barbearia.Dominio\obj\Debug\net6.0\ref\Barbearia.Dominio.dll

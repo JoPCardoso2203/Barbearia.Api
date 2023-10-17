@@ -30,13 +30,11 @@ namespace Barbearia.Dominio.Servicos
             return _repositorioAgendamento.BuscarListaPorUsuario(usuario?.Id ?? 0);
         }
 
-        public void Registrar(string cpf, Agendamento agendamento)
+        public void Registrar(Agendamento agendamento)
         {
-            var usuario = _repositorioUsuario.BuscarPorCpf(cpf);
-            if (usuario != null)
+            if (agendamento != null)
             {
                 agendamento.DataCriacao = DateTime.Now;
-                agendamento.IdUsuario = usuario.Id;
                 _repositorioAgendamento.Adicionar(agendamento);
             }
         }

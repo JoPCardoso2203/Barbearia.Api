@@ -15,11 +15,11 @@ namespace Barbearia.Api.Controllers
         }
 
         [HttpPost("Registrar")]
-        public ActionResult Registrar(Usuario usuario, Agendamento agendamento)
+        public ActionResult Registrar(Agendamento agendamento)
         {
             try
             {
-                _servicoAgendamento.Registrar(usuario?.Cpf ?? "", agendamento);
+                _servicoAgendamento.Registrar(agendamento);
                 return Ok();
             }
             catch (Exception ex)

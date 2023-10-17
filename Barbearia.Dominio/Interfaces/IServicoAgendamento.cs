@@ -11,6 +11,6 @@ namespace Barbearia.Dominio.Interfaces
     {
         List<Agendamento> ObterLista();
         List<Agendamento> ObterListaPorUsuario(string cpf);
-        void Registrar(string cpf, Agendamento agendamento);
+        void Registrar(Agendamento agendamento);
     }
 }

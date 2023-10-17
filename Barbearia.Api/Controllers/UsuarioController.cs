@@ -29,17 +29,18 @@ namespace Barbearia.Api.Controllers
         }
 
         [HttpGet("Login")]
-        public ActionResult Login(Usuario usuario) 
+        public ActionResult Login([FromQuery]Usuario usuario) 
         {
             try
             {
                 Usuario? usuarioLogin = _servicoUsuario.Login(usuario.Cpf, usuario.Senha);
-                object retorno = new
+                object? retorno = new
                 {
                     usuarioLogin?.Nome,
                     usuarioLogin?.TipoAcesso,
                     usuarioLogin?.Cpf
                 };
+                if(usuarioLogin == null) { retorno = null; }
 
                 return Ok(retorno);
             }
@@ -50,7 +51,7 @@ namespace Barbearia.Api.Controllers
         }
 
         [HttpGet("Perfil")]
-        public ActionResult Perfil(Usuario usuario) 
+        public ActionResult Perfil([FromQuery] Usuario usuario) 
         {
             try
             {

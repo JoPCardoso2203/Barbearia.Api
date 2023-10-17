@@ -29,7 +29,7 @@ namespace Barbearia.Api.Controllers
         }
 
         [HttpGet("ListarPorUsuario")]
-        public ActionResult ListarPorUsuario(Usuario usuario)
+        public ActionResult ListarPorUsuario([FromQuery] Usuario usuario)
         {
             try
             {

@@ -17,10 +17,10 @@ namespace Barbearia.Infraestrutura.Repositorios
         {
             httpClient = new HttpClient
             {
-                BaseAddress = new Uri("https://sandbox.asaas.com/api/")//configuration["UrlPagamento"] ?? "")
+                BaseAddress = new Uri(configuration["UrlPagamento"] ?? "")
             };
 
-            httpClient.DefaultRequestHeaders.Add("access_token", "$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjc4NTA6OiRhYWNoXzAxODc0MzhlLWE5MGItNDI4ZC04NzhlLWI5NTlkM2E0YmFkZQ==");
+            httpClient.DefaultRequestHeaders.Add("access_token", configuration["AsaasKey"]);
         }
 
         public async Task<string> CriarClienteAsync(Usuario cliente)

@@ -29,5 +29,26 @@ namespace Barbearia.Dominio.Servicos
         {
             return _repositorioBarbearia.BuscarLista();
         }
+
+        public void AtualizarBarbearia(Entidades.Barbearia barbearia)
+        {
+            var barbeariaAntiga = _repositorioBarbearia.BuscarBarbearia();
+
+            if (barbeariaAntiga != null)
+            {
+                barbeariaAntiga.Latitude = barbearia.Latitude ?? barbeariaAntiga.Latitude;
+                barbeariaAntiga.Longitude = barbearia.Longitude ?? barbeariaAntiga.Longitude;
+                barbeariaAntiga.Endereco = barbeariaAntiga.Endereco ?? barbeariaAntiga.Endereco;
+                barbeariaAntiga.Telefone = barbeariaAntiga.Telefone ??  barbeariaAntiga.Telefone;
+                barbeariaAntiga.Whatsapp = barbeariaAntiga.Whatsapp ?? barbeariaAntiga.Whatsapp;
+
+                _repositorioBarbearia.AtualizarBarbearia(barbeariaAntiga);
+            }
+        }
+
+        public Entidades.Barbearia? ObterBarbearia()
+        {
+            return _repositorioBarbearia.BuscarBarbearia();
+        }
     }
 }

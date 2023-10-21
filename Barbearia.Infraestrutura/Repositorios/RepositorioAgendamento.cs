@@ -42,7 +42,7 @@ namespace Barbearia.Infraestrutura.Repositorios
                                       AGEN_USUA_ID IdUsuario,
                                       AGEN_DT_INICIO DataInicio,
                                       AGEN_DT_CRIACAO DataCriacao
-                               FROM AGENDAMENTO WHERE AGEN_USUA_ID = @Id";
+                               FROM agendamento WHERE AGEN_USUA_ID = @Id";
 
             return ObterLista<Agendamento>(script, new { Id = idUsuario });
         }
@@ -54,7 +54,7 @@ namespace Barbearia.Infraestrutura.Repositorios
                                       AGEN_USUA_ID IdUsuario,
                                       AGEN_DT_INICIO DataInicio,
                                       AGEN_DT_CRIACAO DataCriacao
-                               FROM AGENDAMENTO";
+                               FROM agendamento";
 
             return ObterLista<Agendamento>(script);
         }

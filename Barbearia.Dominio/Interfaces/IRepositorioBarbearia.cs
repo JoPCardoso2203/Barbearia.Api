@@ -12,5 +12,7 @@ namespace Barbearia.Dominio.Interfaces
         void Adicionar(Funcionario funcionario);
         void Atualizar(Funcionario funcionario);
         List<Funcionario> BuscarLista();
+        void AtualizarBarbearia(Dominio.Entidades.Barbearia barbearia);
+        Entidades.Barbearia? BuscarBarbearia();
     }
 }

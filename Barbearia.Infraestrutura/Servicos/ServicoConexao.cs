@@ -12,7 +12,7 @@ namespace Barbearia.Infraestrutura.Servicos
     {
         public static MySqlConnection ObterConexao(IConfiguration configuracao)
         {
-            var connectionString = configuracao["ConnectionStrings:ConnectionDB"];
+            var connectionString = configuracao.GetConnectionString("ConnectionDB");
             MySqlConnection conexao = new MySqlConnection(connectionString);
             return conexao;
         }

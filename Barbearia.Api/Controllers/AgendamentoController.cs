@@ -29,11 +29,11 @@ namespace Barbearia.Api.Controllers
         }
 
         [HttpGet("ListarPorUsuario")]
-        public ActionResult ListarPorUsuario([FromQuery] Usuario usuario)
+        public ActionResult ListarPorUsuario([FromQuery] string cpf)
         {
             try
             {
-                var lista = _servicoAgendamento.ObterListaPorUsuario(usuario?.Cpf ?? "");
+                var lista = _servicoAgendamento.ObterListaPorUsuario(cpf ?? "");
                 return Ok(lista);
             }
             catch (Exception ex)

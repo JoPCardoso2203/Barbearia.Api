@@ -9,9 +9,11 @@ namespace Barbearia.Api.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IServicoUsuario _servicoUsuario;
-        public UsuarioController(IServicoUsuario servicoUsuario)
+        private readonly IServicoPagamento _servicoPagamento;
+        public UsuarioController(IServicoUsuario servicoUsuario, IServicoPagamento servicoPagamento)
         {
             _servicoUsuario = servicoUsuario;
+            _servicoPagamento = servicoPagamento;
         }
 
         [HttpPost("Registrar")]
@@ -71,6 +73,19 @@ namespace Barbearia.Api.Controllers
             {
                 _servicoUsuario.AtualizarSenhaUsuario(usuario.Cpf, usuario.Senha);
                 return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("PagamentoPix")]
+        public ActionResult PagamentoPix(string cpf, decimal valor)
+        {
+            try
+            {
+                return Ok(_servicoPagamento.ObterPagamentoPix(cpf, valor));
             }
             catch (Exception ex)
             {

@@ -41,12 +41,12 @@ namespace Barbearia.Api.Controllers
             }
         }
 
-        /*[HttpGet("Localizacao")]
-        public ActionResult ObterLocalizacao() 
+        [HttpGet("Barbearia")]
+        public ActionResult ObterBarbearia() 
         {
             try
             {
-                return Ok();
+                return Ok(_servicoBarbearia.ObterBarbearia());
             }
             catch (Exception ex)
             {
@@ -54,17 +54,18 @@ namespace Barbearia.Api.Controllers
             }
         }
 
-        [HttpPatch("Localizacao")]
-        public ActionResult AlterarLocalizacao() 
+        [HttpPatch("Barbearia")]
+        public ActionResult AlterarBarbearia(Dominio.Entidades.Barbearia barbearia) 
         {
             try
             {
+                _servicoBarbearia.AtualizarBarbearia(barbearia);
                 return Ok(); 
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-        }*/
+        }
     }
 }

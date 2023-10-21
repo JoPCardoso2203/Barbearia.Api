@@ -13,10 +13,12 @@ namespace Barbearia.Api.Configuracoes
             services.AddScoped<IRepositorioUsuario, RepositorioUsuario>();
             services.AddScoped<IRepositorioBarbearia, RepositorioBarbearia>();
             services.AddScoped<IRepositorioAgendamento, RepositorioAgendamento>();
+            services.AddScoped<IRepositorioPagamento, RepositorioPagamento>();
 
             services.AddScoped<IServicoAgendamento, ServicoAgendamento>();
             services.AddScoped<IServicoBarbearia, ServicoBarbearia>();
             services.AddScoped<IServicoUsuario, ServicoUsuario>();
+            services.AddScoped<IServicoPagamento, ServicoPagamento>(); 
         }
     }
 }

@@ -25,12 +25,11 @@ namespace Barbearia.Dominio.Servicos
             }
         }
 
-        public void Apagar(decimal idFuncionario)
+        public void Apagar(decimal? idFuncionario)
         {
-            if (funcionario != null)
+            if (idFuncionario != null)
             {
-                funcionario.DataCriacao = DateTime.Now;
-                _repositorioBarbearia.Apagar(funcionario);
+                _repositorioBarbearia.Apagar(idFuncionario);
             }
         }
 

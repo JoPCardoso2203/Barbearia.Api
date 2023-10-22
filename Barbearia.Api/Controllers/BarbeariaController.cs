@@ -28,12 +28,12 @@ namespace Barbearia.Api.Controllers
             }
         }
 
-        [HttpPost("ApagarBarbeiro")]
-        public ActionResult ApagarBarbeiro(Funcionario funcionario)
+        [HttpDelete("ApagarBarbeiro")]
+        public ActionResult ApagarBarbeiro(decimal idFuncionario)
         {
             try
             {
-                _servicoBarbearia.Registrar(funcionario);
+                _servicoBarbearia.Apagar(idFuncionario);
                 return Ok();
             }
             catch (Exception ex)

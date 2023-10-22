@@ -25,7 +25,7 @@ namespace Barbearia.Dominio.Servicos
             }
         }
 
-        public void Apagar(Funcionario funcionario)
+        public void Apagar(decimal idFuncionario)
         {
             if (funcionario != null)
             {

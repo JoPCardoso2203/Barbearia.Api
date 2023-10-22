@@ -38,6 +38,7 @@ namespace Barbearia.Api.Controllers
                 Usuario? usuarioLogin = _servicoUsuario.Login(usuario.Cpf, usuario.Senha);
                 object? retorno = new
                 {
+                    usuarioLogin?.Id,
                     usuarioLogin?.Nome,
                     usuarioLogin?.TipoAcesso,
                     usuarioLogin?.Cpf

@@ -10,6 +10,7 @@ namespace Barbearia.Dominio.Interfaces
     public interface IRepositorioBarbearia
     {
         void Adicionar(Funcionario funcionario);
+        void Apagar(Funcionario funcionario);
         void Atualizar(Funcionario funcionario);
         List<Funcionario> BuscarLista();
         void AtualizarBarbearia(Dominio.Entidades.Barbearia barbearia);

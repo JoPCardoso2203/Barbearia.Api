@@ -25,6 +25,15 @@ namespace Barbearia.Dominio.Servicos
             }
         }
 
+        public void Apagar(Funcionario funcionario)
+        {
+            if (funcionario != null)
+            {
+                funcionario.DataCriacao = DateTime.Now;
+                _repositorioBarbearia.Apagar(funcionario);
+            }
+        }
+
         public List<Funcionario> BuscarListaFuncionario()
         {
             return _repositorioBarbearia.BuscarLista();

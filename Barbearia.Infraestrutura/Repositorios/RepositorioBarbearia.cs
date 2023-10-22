@@ -22,6 +22,12 @@ namespace Barbearia.Infraestrutura.Repositorios
             Executar<Funcionario>(script, funcionario);
         }
 
+        public void Apagar(Funcionario funcionario)
+        {
+            string script = $@"DELETE FROM funcionario WHERE func_id = @Id";
+            Executar<Funcionario>(script, funcionario);
+        }
+
         public void Atualizar(Funcionario funcionario)
         {
             string script = $@"UPDATE funcionario SET 
